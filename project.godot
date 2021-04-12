@@ -16,7 +16,7 @@ _global_script_class_icons={
 [application]
 
 config/name="Cs 4700- Godot"
-config/icon="res://icon.png"
+config/icon="res://Art/icon.png"
 
 [rendering]
 
