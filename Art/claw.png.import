@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/line-png-6.png-46b5750451eebc68b088f4c321e300aa.stex"
+path="res://.import/claw.png-c3fa76860fa63741628b9534e6b7cca1.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Art/line-png-6.png"
-dest_files=[ "res://.import/line-png-6.png-46b5750451eebc68b088f4c321e300aa.stex" ]
+source_file="res://Art/claw.png"
+dest_files=[ "res://.import/claw.png-c3fa76860fa63741628b9534e6b7cca1.stex" ]
 
 [params]
 

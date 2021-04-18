@@ -1,40 +1,15 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=3 format=2]
 
-[ext_resource path="res://Art/line-png-6.png" type="Texture" id=1]
+[ext_resource path="res://Claw.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Art/bg.png" type="Texture" id=2]
-[ext_resource path="res://Player.gd" type="Script" id=3]
 
-[sub_resource type="CircleShape2D" id=1]
-
-[node name="Node2D" type="Node2D"]
+[node name="MainScene" type="Node2D"]
 position = Vector2( 0, 2.99661 )
 
 [node name="bg" type="Sprite" parent="."]
 position = Vector2( 518.33, 306.466 )
 scale = Vector2( 1.0652, 1.04089 )
 texture = ExtResource( 2 )
-__meta__ = {
-"_edit_lock_": true
-}
 
-[node name="Player" type="KinematicBody2D" parent="."]
-position = Vector2( 484.356, 201.815 )
-script = ExtResource( 3 )
-__meta__ = {
-"_edit_group_": true
-}
-
-[node name="line-png-6" type="Sprite" parent="Player"]
-position = Vector2( 211.757, -9.37839 )
-scale = Vector2( 1.21892, 0.0444443 )
-texture = ExtResource( 1 )
-__meta__ = {
-"_edit_group_": true
-}
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Player"]
-position = Vector2( 374.6, -6.54064 )
-shape = SubResource( 1 )
-__meta__ = {
-"_edit_group_": true
-}
+[node name="Claw" parent="." instance=ExtResource( 1 )]
+position = Vector2( 588.409, 151.698 )

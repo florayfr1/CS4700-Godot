@@ -1,11 +1,11 @@
 extends KinematicBody2D
 
+var score : int = 0
+var speed : int = 200
+var gravity : int = 800
 
-# Declare member variables here. Examples:
-# var a = 2
-# var b = "text"
 
-export var gravity = 9.8
+
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -13,5 +13,5 @@ func _ready():
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta):
-	pass
+#func _process(delta):
+#	pass

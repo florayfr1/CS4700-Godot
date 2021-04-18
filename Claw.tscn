@@ -1,0 +1,24 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://Art/claw.png" type="Texture" id=1]
+[ext_resource path="res://Claw.gd" type="Script" id=2]
+
+[sub_resource type="CapsuleShape2D" id=1]
+radius = 17.0469
+height = 0.0
+
+[node name="Claw" type="KinematicBody2D"]
+position = Vector2( 19.9019, -44.4627 )
+script = ExtResource( 2 )
+
+[node name="claw" type="Sprite" parent="."]
+position = Vector2( 17.6222, 85.7666 )
+scale = Vector2( 0.0639723, 0.0688759 )
+texture = ExtResource( 1 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2( 47.3904, 115.672 )
+shape = SubResource( 1 )
