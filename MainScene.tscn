@@ -6,5 +6,5 @@
 [node name="MainScene" type="Node2D"]
 
 [node name="Player" parent="." instance=ExtResource( 1 )]
-position = Vector2( 525.494, 584.824 )
+position = Vector2( 531.494, 728.824 )
 script = ExtResource( 2 )
