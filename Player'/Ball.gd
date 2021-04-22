@@ -1,12 +1,13 @@
 extends KinematicBody2D
 
 export var speed = 500
+
 var world = "res://Game 1/MainScene.tscn"
 var direction = Vector2(0.5, 1)
 var is_throwing = false
 
 onready var is_visible = get_node("BallVisible")
-
+	
 func _physics_process(delta):
 	if Input.is_action_just_pressed("throw"):
 		is_throwing = true
