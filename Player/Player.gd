@@ -7,7 +7,7 @@ var friction = 200
 export var player_length = 7
 
 onready var player_map = get_node("playerParts")
-const p_container = preload("res://Player\'/PContainer.tres")
+const p_container = preload("res://Player/PContainer.tres")
 #player_container
 const player_cell_width = 32  #width of indiv player cell in pixels
 

@@ -12,20 +12,20 @@ animations = [ {
 } ]
 
 [sub_resource type="RectangleShape2D" id=2]
-extents = Vector2( 65.3324, 15.3848 )
+extents = Vector2( 48, 7.35069 )
 
 [node name="Brick1" type="StaticBody2D"]
-position = Vector2( 64.406, 15.6844 )
+position = Vector2( 64, 16 )
 script = ExtResource( 2 )
 __meta__ = {
 "_edit_group_": true
 }
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
-position = Vector2( 3.05176e-05, 0 )
-scale = Vector2( 0.409992, 0.53971 )
+position = Vector2( -16.8998, -7.6844 )
+scale = Vector2( 0.304037, 0.275862 )
 frames = SubResource( 1 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2( 0.33371, -0.33371 )
+position = Vector2( -16, -8 )
 shape = SubResource( 2 )

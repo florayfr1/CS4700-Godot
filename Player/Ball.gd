@@ -2,7 +2,7 @@ extends KinematicBody2D
 
 export var speed = 500
 
-const p_container = preload("res://Player\'/PContainer.tres")
+const p_container = preload("res://Player/PContainer.tres")
 var world = "res://Game 1/MainScene.tscn"
 var direction = Vector2(0.5, 1)
 var is_throwing = false

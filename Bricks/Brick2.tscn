@@ -2,7 +2,7 @@
 
 [ext_resource path="res://art/brick_green.png" type="Texture" id=1]
 [ext_resource path="res://Bricks/Brick.gd" type="Script" id=2]
-[ext_resource path="res://art/brick_pink.png" type="Texture" id=3]
+[ext_resource path="res://art/brick_green_broken.png" type="Texture" id=3]
 
 [sub_resource type="SpriteFrames" id=1]
 animations = [ {
@@ -13,17 +13,20 @@ animations = [ {
 } ]
 
 [sub_resource type="RectangleShape2D" id=2]
-extents = Vector2( 65.3324, 15.3848 )
+extents = Vector2( 48, 8 )
 
 [node name="Brick2" type="StaticBody2D"]
 position = Vector2( 64.406, 15.6844 )
 script = ExtResource( 2 )
+__meta__ = {
+"_edit_group_": true
+}
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
-position = Vector2( 0.884419, -0.0822105 )
-scale = Vector2( 0.0634308, 0.0324277 )
+position = Vector2( -16.406, -7.09038 )
+scale = Vector2( 0.299468, 0.255378 )
 frames = SubResource( 1 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2( 0.33371, -0.33371 )
+position = Vector2( -16.406, -7.6844 )
 shape = SubResource( 2 )
