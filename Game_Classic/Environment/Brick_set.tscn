@@ -1,0 +1,73 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://Game_Classic/art/brick_green.png" type="Texture" id=1]
+[ext_resource path="res://Game_Classic/art/brick_blue.png" type="Texture" id=2]
+[ext_resource path="res://Game_Classic/art/brick_pink.png" type="Texture" id=3]
+[ext_resource path="res://Game_Classic/art/brick_grey.png" type="Texture" id=4]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 200.013, 157.5 )
+
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 16, 16 )
+
+[node name="Brick" type="Node2D"]
+
+[node name="brick_green" type="Sprite" parent="."]
+position = Vector2( 168, 8 )
+scale = Vector2( 0.303781, 0.257252 )
+texture = ExtResource( 1 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="StaticBody2D" type="StaticBody2D" parent="brick_green"]
+position = Vector2( 670.167, -13.44 )
+scale = Vector2( 0.246888, 0.0987233 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="brick_green/StaticBody2D"]
+position = Vector2( -2714.47, 136.138 )
+shape = SubResource( 1 )
+
+[node name="brick_blue" type="Sprite" parent="."]
+position = Vector2( 312, 8 )
+scale = Vector2( 0.303781, 0.257252 )
+texture = ExtResource( 2 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="StaticBody2D" type="StaticBody2D" parent="brick_blue"]
+position = Vector2( 670.167, -13.44 )
+scale = Vector2( 0.246888, 0.0987233 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="brick_blue/StaticBody2D"]
+position = Vector2( -2714.46, 136.138 )
+shape = SubResource( 1 )
+
+[node name="brick_grey" type="Sprite" parent="."]
+position = Vector2( 448, 8 )
+scale = Vector2( 0.303781, 0.257252 )
+texture = ExtResource( 4 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="StaticBody2D" type="StaticBody2D" parent="brick_grey"]
+position = Vector2( 670.167, -13.44 )
+scale = Vector2( 0.246888, 0.0987233 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="brick_grey/StaticBody2D"]
+position = Vector2( -2714.46, 136.138 )
+shape = SubResource( 1 )
+
+[node name="wall_pink" type="Sprite" parent="."]
+position = Vector2( 12, 12 )
+scale = Vector2( 0.6875, 0.6875 )
+texture = ExtResource( 3 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="wall_pink"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="wall_pink/StaticBody2D"]
+position = Vector2( -1.90735e-06, -1.90735e-06 )
+shape = SubResource( 2 )

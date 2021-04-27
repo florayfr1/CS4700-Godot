@@ -1,0 +1,21 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://Game_Classic/art/paddle.png" type="Texture" id=1]
+
+[node name="PlayerParts" type="Node2D"]
+
+[node name="paddle_left" type="Sprite" parent="."]
+position = Vector2( 44.8492, 59.4485 )
+scale = Vector2( 0.984375, 1.42188 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 0, 0, 32, 32 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="StaticBody2D" type="StaticBody2D" parent="paddle_left"]
+position = Vector2( 0.507935, 1.05494 )
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="paddle_left/StaticBody2D"]
+polygon = PoolVector2Array( 13.9008, -16.6985, -14.0992, -16.6985, -15.0992, 14.3015, 13.3595, 15.1571 )
