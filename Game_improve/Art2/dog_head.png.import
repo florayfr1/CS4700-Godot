@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/tennis_ball.png-81a0641f571e74c5a3a9a9d6791c5d11.stex"
+path="res://.import/dog_head.png-5db8e8898ef1c0140856db758c73fb49.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Game_improve/Art/tennis_ball.png"
-dest_files=[ "res://.import/tennis_ball.png-81a0641f571e74c5a3a9a9d6791c5d11.stex" ]
+source_file="res://Game_improve/Art2/dog_head.png"
+dest_files=[ "res://.import/dog_head.png-5db8e8898ef1c0140856db758c73fb49.stex" ]
 
 [params]
 

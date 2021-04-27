@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/dog_head.png-74f5931cc8fae403136e34fc93b39c1c.stex"
+path="res://.import/dog_tail.png-dbee735013270d23d444add3c6b7b300.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Game_improve/Art/dog_head.png"
-dest_files=[ "res://.import/dog_head.png-74f5931cc8fae403136e34fc93b39c1c.stex" ]
+source_file="res://Game_improve/Art2/dog_tail.png"
+dest_files=[ "res://.import/dog_tail.png-dbee735013270d23d444add3c6b7b300.stex" ]
 
 [params]
 
