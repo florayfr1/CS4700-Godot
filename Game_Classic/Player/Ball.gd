@@ -7,6 +7,8 @@ var world = "res://Game_Classic/Game_Main/MainScene.tscn"
 var direction = Vector2(0.5, 1)
 var is_throwing = false
 
+signal hit_signal(brick)
+
 onready var is_visible = get_node("BallVisible")
 	
 func _physics_process(delta):
@@ -28,10 +30,11 @@ func _physics_process(delta):
 			direction.x = get_bounce_directionx(collision)
 
 		else:
-			print(collision.collider.get_meta("brick"))
 			if collision.collider.get_meta("brick"):
-				print("hit brick")
-				collision.collider.decrease_points()
+				var brick = collision.collider
+				emit_signal("hit_signal", brick)
+				brick.decrease_points()
+
 			direction = direction.bounce(collision.normal)
 		
 func get_bounce_directionx(collision: KinematicCollision2D):
