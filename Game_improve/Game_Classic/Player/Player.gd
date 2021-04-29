@@ -19,8 +19,8 @@ func build_player(length):
 	assert(length >= 2, "Error: length must be greater than 2")
 	#Video part 4
 	var temp_cell = 0
-	var left_body_part = 1
-	var middle_body_part =3
+	var left_body_part = 0
+	var middle_body_part =1
 	var right_body_part = 2
 	
 	player_map.set_cell(temp_cell,0,left_body_part)

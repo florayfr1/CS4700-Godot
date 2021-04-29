@@ -15,7 +15,7 @@ difficulty = 3
 [node name="Player" parent="." instance=ExtResource( 5 )]
 position = Vector2( 367.079, 617.014 )
 script = ExtResource( 1 )
-player_length = 3
+player_length = 4
 
 [node name="Wall" type="TileMap" parent="."]
 position = Vector2( 2.99664, -5.99323 )
