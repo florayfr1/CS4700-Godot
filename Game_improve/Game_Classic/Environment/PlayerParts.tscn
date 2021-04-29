@@ -1,0 +1,58 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://Game_improve/Art2/dog_whole.png" type="Texture" id=1]
+
+[sub_resource type="RectangleShape2D" id=14]
+extents = Vector2( 141.971, 121.44 )
+
+[sub_resource type="RectangleShape2D" id=11]
+extents = Vector2( 136.658, 44.3716 )
+
+[sub_resource type="RectangleShape2D" id=13]
+extents = Vector2( 56.5836, 70.9202 )
+
+[node name="PlayerParts" type="Node2D"]
+
+[node name="paddle_left" type="Sprite" parent="."]
+position = Vector2( 95.431, 640 )
+scale = Vector2( 0.509749, 0.57918 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 0, -11, 286, 270 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="paddle_left"]
+position = Vector2( 0.507935, 1.05494 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="paddle_left/StaticBody2D"]
+shape = SubResource( 14 )
+
+[node name="paddle_middle" type="Sprite" parent="."]
+position = Vector2( 256.8, 640 )
+scale = Vector2( 0.509749, 0.57918 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 286, -11, 279, 267 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="StaticBody2D" type="StaticBody2D" parent="paddle_middle"]
+position = Vector2( 0.507935, 1.05494 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="paddle_middle/StaticBody2D"]
+position = Vector2( -3.35664, 15.9753 )
+shape = SubResource( 11 )
+
+[node name="paddle_right" type="Sprite" parent="."]
+position = Vector2( 365.246, 639.39 )
+scale = Vector2( 0.509749, 0.57918 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 549.526, -11, 121.843, 270 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="paddle_right"]
+position = Vector2( 0.507935, 1.05494 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="paddle_right/StaticBody2D"]
+position = Vector2( -6.93585, 38.4576 )
+shape = SubResource( 13 )
