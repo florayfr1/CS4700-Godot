@@ -2,7 +2,6 @@
 
 [ext_resource path="res://Game_Classic/art/paddle.png" type="Texture" id=1]
 
-
 [sub_resource type="ConvexPolygonShape2D" id=1]
 points = PoolVector2Array( 13.3595, 15.1571, -15.0992, 14.3015, -14.0992, -16.6985, 13.9008, -16.6985 )
 
