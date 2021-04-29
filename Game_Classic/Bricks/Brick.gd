@@ -54,6 +54,3 @@ func decrease_points():
 	
 	if points <= 0:
 		queue_free()
-
-func is_exist_after_hit():
-	return points > 1

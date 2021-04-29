@@ -10,10 +10,6 @@ const brick_class = preload("res://Game_Classic/Bricks/Brick.tscn")
 const cell_width = 96
 const cell_height = 32
 
-var brick_arr = []
-
-signal level_clear
-
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	rows += difficulty
@@ -41,16 +37,3 @@ func init_brick(frame, brick, row, column, indestructable):
 		add_child(brick)
 		brick.position.x = 80 + column  * cell_width
 		brick.position.y = 24 + row* cell_height
-		
-		if not indestructable:
-			brick_arr.append(brick)
-
-
-func _on_brick_hit(brick):
-	var brick_index = brick_arr.find(brick)
-	var brick_found = brick_index != -1
-	if not brick.is_exist_after_hit() and brick_found:
-		brick_arr.remove(brick_index)
-	if brick_arr.size() == 0:
-		emit_signal("level_clear")
-		print("level clear")
