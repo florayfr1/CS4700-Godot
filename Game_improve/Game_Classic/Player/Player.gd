@@ -20,7 +20,7 @@ func build_player(length):
 	#Video part 4
 	var temp_cell = 0
 	var left_body_part = 1
-	var middle_body_part = 3
+	var middle_body_part =3
 	var right_body_part = 2
 	
 	player_map.set_cell(temp_cell,0,left_body_part)
@@ -33,7 +33,6 @@ func build_player(length):
 	player_map.set_cell(temp_cell,0,right_body_part)
 	
 func _physics_process(delta):
-	fix_y()
 	if Input.is_action_pressed("move_left"):
 		velocity.x = -acceleration
 	elif Input.is_action_pressed("move_right"):
@@ -42,5 +41,3 @@ func _physics_process(delta):
 
 	velocity = velocity.move_toward(Vector2.ZERO, friction)
 
-func fix_y():
-	position.y = 665

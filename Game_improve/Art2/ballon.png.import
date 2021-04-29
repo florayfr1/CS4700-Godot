@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/ballon.png-24b31542befc0c43a31e3a1995153d8e.stex"
+path="res://.import/ballon.png-84e2cbcc1faec95234ba0efa4ab2c24f.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Game_improve/Art2/ballon.png"
-dest_files=[ "res://.import/ballon.png-24b31542befc0c43a31e3a1995153d8e.stex" ]
+source_file="res://Art2/ballon.png"
+dest_files=[ "res://.import/ballon.png-84e2cbcc1faec95234ba0efa4ab2c24f.stex" ]
 
 [params]
 

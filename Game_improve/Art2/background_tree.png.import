@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/background_tree.png-653f04ca10ddd70e6acf0036b7297bee.stex"
+path="res://.import/background_tree.png-5adb9ee5d8e9eb8d64ae56dae695d5a0.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Game_improve/Art2/background_tree.png"
-dest_files=[ "res://.import/background_tree.png-653f04ca10ddd70e6acf0036b7297bee.stex" ]
+source_file="res://Art2/background_tree.png"
+dest_files=[ "res://.import/background_tree.png-5adb9ee5d8e9eb8d64ae56dae695d5a0.stex" ]
 
 [params]
 

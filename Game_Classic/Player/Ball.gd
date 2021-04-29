@@ -25,7 +25,7 @@ func _physics_process(delta):
 	if collision != null:
 		if collision.collider == p_container.player:
 			direction = direction.bounce(collision.normal)
-			direction.x = get_bounce_directionx(collision)
+		
 
 		else:
 			print(collision.collider.get_meta("brick"))
@@ -34,10 +34,6 @@ func _physics_process(delta):
 				collision.collider.decrease_points()
 			direction = direction.bounce(collision.normal)
 		
-func get_bounce_directionx(collision: KinematicCollision2D):
-	var relativex = collision.position.x - p_container.player.global_position.x
-	var percent = relativex / p_container.player_width
-	return (percent - 0.5) * 2
 	
 func is_game_over():
 	if not is_visible.is_on_screen():
