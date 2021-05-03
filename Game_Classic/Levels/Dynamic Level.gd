@@ -10,6 +10,10 @@ const brick_class = preload("res://Game_Classic/Bricks/Brick.tscn")
 const cell_width = 96
 const cell_height = 32
 
+var brick_arr = []
+
+signal level_done
+
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	rows += difficulty
@@ -37,3 +41,17 @@ func init_brick(frame, brick, row, column, indestructable):
 		add_child(brick)
 		brick.position.x = 80 + column  * cell_width
 		brick.position.y = 24 + row* cell_height
+		if not indestructable:
+			brick_arr.append(brick)
+
+
+func _on_ball_hit(brick):
+	var position = brick_arr.find(brick)
+	var brick_found = position != -1
+	if not brick.is_alive_after() and brick_found:
+		brick_arr.remove(position)
+		
+	
+	if brick_arr.size() == 0:
+		emit_signal("level done")
+		print("level done")
