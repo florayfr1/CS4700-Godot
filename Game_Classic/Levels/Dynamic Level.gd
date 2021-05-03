@@ -17,7 +17,7 @@ signal level_done
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	rows += difficulty
-	var empty_range = 0.6 - (difficulty/ 10.0) #(0.1 to 0.5)
+	var empty_range = 0.6 - (difficulty/ 10.0) #(0.1 to 0.5)	
 
 	for column in range(columns):
 		for row in range(rows):
