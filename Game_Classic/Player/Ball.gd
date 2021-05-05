@@ -8,7 +8,7 @@ var direction = Vector2(0.5, 1)
 var is_throwing = false
 
 onready var is_visible = get_node("BallVisible")
-	
+onready var audio = get_node("AudioStreamPlayer2D")
 signal ball_hit(brick)
 
 func _physics_process(delta):
@@ -27,6 +27,7 @@ func _physics_process(delta):
 	if collision != null:
 		if collision.collider == p_container.player:
 			direction = direction.bounce(collision.normal)
+			play("res://Game_Classic/Sound/paddle_hit.wav")	
 	
 		else:
 			var hit_position = - collision.collider.global_position + collision.position 
@@ -35,11 +36,20 @@ func _physics_process(delta):
 			direction = direction.bounce(normal)			
 						
 			if collision.collider.get_meta("brick"):
+				play("res://Game_Classic/Sound/brick_hit.wav")
 				var brick = collision.collider
 				emit_signal("ball_hit", brick)
 				brick.decrease_points()
+			else:
+				play("res://Game_Classic/Sound/wall_hit.wav")
 				
-
+func play(path):
+	var audio = AudioStreamPlayer.new()
+	get_tree().get_root().add_child(audio)
+	var sound = load(path)
+	audio.set_stream(sound)
+	audio.play()
+	
 func fix_normal(normal, hit_position):
 	if normal.x == 1 or normal.x == -1 or normal.y == 1 or normal.y == -1:
 		return normal

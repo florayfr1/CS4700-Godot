@@ -11,11 +11,17 @@ const p_container = preload("res://Game_Classic/Player/PContainer.tres")
 #player_container
 const player_cell_width = 32  #width of indiv player cell in pixels
 
+
 func _ready():
+	var audio = AudioStreamPlayer.new()
+	self.add_child(audio)
+	audio.stream = load("res://Game_Classic/Sound/song.wav")
+	audio.play()
 	build_player(player_length)
 	p_container.player = self
 	p_container.player_width = player_length * player_cell_width
 func build_player(length):
+
 	assert(length >= 2, "Error: length must be greater than 2")
 	#Video part 4
 	
