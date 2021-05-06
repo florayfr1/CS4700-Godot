@@ -43,5 +43,5 @@ margin_bottom = 16.0
 [connection signal="level_done" from="Dynamic Level" to="Ball" method="_on_Dynamic_Level_level_done"]
 [connection signal="level_done" from="Dynamic Level" to="LevelDone" method="_on_Dynamic_Level_level_done"]
 [connection signal="ball_hit" from="Ball" to="Dynamic Level" method="_on_ball_hit"]
-[connection signal="game_over" from="Ball" to="Player" method="_on_Ball_game_over"]
 [connection signal="game_over" from="Ball" to="GameOver" method="_on_Ball_game_over"]
+[connection signal="game_over" from="Ball" to="Player" method="_on_Ball_game_over"]
