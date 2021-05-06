@@ -10,6 +10,7 @@ var is_throwing = false
 onready var is_visible = get_node("BallVisible")
 	
 signal ball_hit(brick)
+signal game_over
 
 func _physics_process(delta):
 	if Input.is_action_just_pressed("throw"):
@@ -56,6 +57,9 @@ func fix_normal(normal, hit_position):
 	return normal
 func is_game_over():
 	if not is_visible.is_on_screen():
-		print("Game over")
-		get_tree().change_scene(world)
 		
+		emit_signal("game_over")
+
+
+func _on_Dynamic_Level_level_done():
+	is_throwing = false

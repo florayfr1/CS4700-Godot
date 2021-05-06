@@ -4,6 +4,8 @@ var velocity = Vector2.ZERO
 var acceleration = 500
 var friction = 200
 
+var is_throwing 
+
 export var player_length = 7
 
 onready var player_map = get_node("playerParts")
@@ -15,6 +17,8 @@ func _ready():
 	build_player(player_length)
 	p_container.player = self
 	p_container.player_width = player_length * player_cell_width
+	is_throwing = true
+	
 func build_player(length):
 	assert(length >= 2, "Error: length must be greater than 2")
 	#Video part 4
@@ -32,6 +36,10 @@ func build_player(length):
 	player_map.set_cell(temp_cell,0,left_body_part)
 	
 func _physics_process(delta):
+	if not is_throwing:
+		return
+	
+	
 	fix_y()
 	if Input.is_action_pressed("move_left"):
 		velocity.x = -acceleration
@@ -43,3 +51,11 @@ func _physics_process(delta):
 
 func fix_y():
 	position.y = 665
+
+
+func _on_Dynamic_Level_level_done():
+	is_throwing = false
+
+
+func _on_Ball_game_over():
+	is_throwing = false
