@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/brick_hit.wav-8f1395c81bda518e66b0d23d684591e8.sample"
+
+[deps]
+
+source_file="res://Game_Classic/Sound/brick_hit.wav"
+dest_files=[ "res://.import/brick_hit.wav-8f1395c81bda518e66b0d23d684591e8.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

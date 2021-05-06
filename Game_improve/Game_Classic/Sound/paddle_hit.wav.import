@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/paddle_hit.wav-5a2082fba7ebc49a9a6673468c86f055.sample"
+
+[deps]
+
+source_file="res://Game_Classic/Sound/paddle_hit.wav"
+dest_files=[ "res://.import/paddle_hit.wav-5a2082fba7ebc49a9a6673468c86f055.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0
